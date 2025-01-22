@@ -3,7 +3,7 @@ Akan Web
 ## Project Description 
 A web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. 
 ## Author's Information
-Auhtor's name- Tedd James
+Author's name: Tedd James
 ## Setup Instructions
 
 ## BDD
@@ -11,5 +11,5 @@ Auhtor's name- Tedd James
 ## Technologies Used
 
 ## Contact Information
-Email- tedd.james@student.moringaschool.com
+Email: tedd.james@student.moringaschool.com
 ## License
