@@ -13,3 +13,4 @@ Author's name: Tedd James
 ## Contact Information
 Email: tedd.james@student.moringaschool.com
 ## License
+GNU General Public License (GPL) v3.0
