@@ -1,36 +1,26 @@
+/* styles.css */
 body {
-  font-family: cursive;
+  font-family: Arial, sans-serif;
   margin: 20px;
-}
-.form-container {
-  max-width: 400px;
-  margin: auto;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-label,
-select,
-input,
-button {
-  display: block;
-  width: 100%;
-  margin-bottom: 15px;
+
+form {
+  margin-bottom: 20px;
 }
+
+label {
+  margin-right: 10px;
+}
+
 button {
-  padding: 10px;
-  background-color: #007bff;
+  padding: 10px 20px;
+  background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
+
 button:hover {
-  background-color: #0056b3;
-}
-.result {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
+  background-color: #45a049;
 }
