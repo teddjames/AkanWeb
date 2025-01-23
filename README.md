@@ -12,7 +12,7 @@ Author's name: Tedd James
 
 ## Setup Instructions
 
-I created a folder known as AkanWeb where I made a readme file,index.html file,css file and folder and JS folder and file
+I created a folder known as AkanWeb where I made a readme file,index.html file,css file and folder and JS folder and file. This web can be accessed from a link
 
 ## Technologies Used
 
