@@ -17,6 +17,7 @@ I created a folder known as AkanWeb where I made a readme file,index.html file,c
 ## Technologies Used
 
 Java Script,CSS & README
+## Link to project
 
 ## Contact Information
 
