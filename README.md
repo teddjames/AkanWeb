@@ -14,11 +14,13 @@ Author's name: Tedd James
 
 I created a folder known as AkanWeb where I made a readme file,index.html file,css file and folder and JS folder and file. This web can be accessed from a link
 
+## Link to project
+https://teddjames.github.io/AkanWeb/
+
 ## Technologies Used
 
 Java Script,CSS & README
-## Link to project
-https://teddjames.github.io/AkanWeb/
+
 ## Contact Information
 
 Email: tedd.james@student.moringaschool.com
