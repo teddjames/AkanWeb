@@ -1,77 +1,119 @@
-/* Body styling */
+/* General body styling */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f2f2f2; /* Light grey background */
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #f4f4f9; /* Light, neutral background */
+  color: #333333; /* Dark, readable text color */
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  color: #333;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Paragraph styling (for the description) */
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 20px auto;
+  max-width: 700px;
+  color: #555555;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-left: 5px solid #6c63ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: justify;
 }
 
 /* Form container styling */
 .form-container {
-  background-color: #ffffff; /* White background for the form */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  padding: 40px 30px;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
   width: 100%;
-  max-width: 500px; /* Limits form width */
-  text-align: center;
+  margin: 30px auto;
+}
+
+/* Heading styling */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #6c63ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Label styling */
 label {
-  font-size: 18px;
-  color: #555; /* Darker color for readability */
+  font-size: 1rem;
+  color: #333333;
   display: block;
-  margin-bottom: 10px;
+  margin: 15px 0 5px;
   text-align: left;
-  margin-left: 10px;
 }
 
-/* Select and Input styling */
-select,
-input {
+/* Input and select styling */
+input[type="date"],
+select {
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-  background-color: #f9f9f9; /* Light background for inputs */
-  color: #555;
+  padding: 10px;
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Hover and focus effects for input and select */
+input[type="date"]:hover,
+select:hover {
+  border-color: #6c63ff;
+}
+
+input[type="date"]:focus,
+select:focus {
+  border-color: #6c63ff;
+  outline: none;
 }
 
 /* Button styling */
 button {
   width: 100%;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #007bff; /* Blue background */
-  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #6c63ff;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-/* Button hover effect */
+
 button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #5a54e6;
+  transform: scale(1.05);
 }
+
+button:active {
+  transform: scale(1);
+}
+
 /* Result section styling */
 .result {
   margin-top: 20px;
-  padding: 20px;
-  font-size: 20px;
+  font-size: 1.2rem;
+  color: #6c63ff;
   font-weight: bold;
-  background-color: #eaf7ff; /* Light blue background */
-  border-radius: 10px;
-  color: #333;
-  border: 1px solid #d1e7f5; /* Subtle border */
-  display: none; /* Initially hidden */
+  padding: 10px;
+  border: 1px solid #cccccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
