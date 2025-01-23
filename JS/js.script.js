@@ -1,4 +1,3 @@
-// Akan Name Generator function
 function generateAkanName() {
   // Get the values from the form
   const birthdate = document.getElementById("birthdate").value;
@@ -10,37 +9,31 @@ function generateAkanName() {
     return;
   }
 
-  // Split the birthdate into year, month, day
+  // Check if the gender is selected
+  if (!gender) {
+    alert("Please select your gender.");
+    return;
+  }
+
+  // Parse the birthdate and get the day of the week
   const [year, month, day] = birthdate.split("-").map(Number);
+  const date = new Date(year, month - 1, day); // Months are 0-indexed in JavaScript
 
-  // Validate the date and month
-  if (day <= 0 || day > 31) {
-    alert("Invalid day! Please enter a valid day (1-31).");
-    return;
-  }
-  if (month <= 0 || month > 12) {
-    alert("Invalid month! Please enter a valid month (1-12).");
+  if (isNaN(date.getTime())) {
+    alert("Invalid date! Please enter a valid date.");
     return;
   }
 
-  // Extract century and year from the birth year
-  const CC = Math.floor(year / 100); // Century (first two digits of year)
-  const YY = year % 100; // Year (last two digits of year)
-
-  // Apply the formula to calculate the day of the week (d)
-  const d =
-    Math.floor(
-      CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (month + 1)) / 10 + day
-    ) % 7;
+  const dayOfWeek = date.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
 
   // Akan name mapping based on the day of the week
   const akanNames = {
-    male: ["Kwasi", "Kwado", "Kwabena", "Kwaku", "Kofi", "Kwame", "Kwasi"],
+    male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
     female: ["Akosua", "Adwoa", "Abenaa", "Akua", "Afia", "Ama", "Akosua"],
   };
 
-  // Array of Akan names (male and female) based on the day of the week
-  const akanName = akanNames[gender][d];
+  // Get the Akan name based on gender and day of the week
+  const akanName = akanNames[gender][dayOfWeek];
 
   // Show the result in the result div
   const resultDiv = document.getElementById("result");
