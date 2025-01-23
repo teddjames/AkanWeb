@@ -1,62 +1,24 @@
-// script.js
-document.getElementById("akan-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  // Get the input values
-  const year = parseInt(document.getElementById("year").value);
-  const month = parseInt(document.getElementById("month").value);
-  const day = parseInt(document.getElementById("day").value);
+// JavaScript for generating Akan Name
+function generateAkanName() {
+  const birthdate = document.getElementById("birthdate").value;
   const gender = document.getElementById("gender").value;
+  const resultDiv = document.getElementById("result");
 
-  // Validate day and month
-  if (month <= 0 || month > 12) {
-    alert("Invalid month! Please enter a month between 1 and 12.");
-    return;
-  }
-  if (day <= 0 || day > 31) {
-    alert("Invalid day! Please enter a day between 1 and 31.");
+  if (!birthdate || !gender) {
+    resultDiv.textContent = "Please fill out all fields.";
     return;
   }
 
-  // Extract century (CC) and year (YY)
-  const CC = Math.floor(year / 100);
-  const YY = year % 100;
+  // Get the day of the week (0 = Sunday, 6 = Saturday)
+  const dayOfWeek = new Date(birthdate).getDay();
 
-  // Calculate the day of the week using the formula
-  const d = Math.floor(
-    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (month + 1)) / 10 + day) % 7
-  );
+  // Akan names data
+  const akanNames = {
+    male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
+    female: ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Afia", "Ama"],
+  };
 
-  // Akan names based on day and gender
-  const maleNames = [
-    "Kwasi",
-    "Kwadwo",
-    "Kwabena",
-    "Kwaku",
-    "Kofi",
-    "Kwame",
-    "Kwasi",
-  ];
-  const femaleNames = [
-    "Akosua",
-    "Adwoa",
-    "Abena",
-    "Akua",
-    "Afia",
-    "Ama",
-    "Akosua",
-  ];
-
-  // Gender-specific name assignment
-  let akanName;
-  if (gender === "male") {
-    akanName = maleNames[d];
-  } else if (gender === "female") {
-    akanName = femaleNames[d];
-  }
-
-  // Display the result
-  document.getElementById(
-    "result"
-  ).innerText = `Your Akan name is: ${akanName}`;
-});
+  // Determine the Akan name
+  const akanName = akanNames[gender][dayOfWeek];
+  resultDiv.textContent = `Your Akan name is ${akanName}.`;
+}
