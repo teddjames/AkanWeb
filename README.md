@@ -14,11 +14,9 @@ Author's name: Tedd James
 
 I created a folder known as AkanWeb where I made a readme file,index.html file,css file and folder and JS folder and file
 
-## BDD
-
 ## Technologies Used
 
-Java Script & CSS
+Java Script,CSS & README
 
 ## Contact Information
 
