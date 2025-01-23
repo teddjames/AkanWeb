@@ -18,7 +18,7 @@ I created a folder known as AkanWeb where I made a readme file,index.html file,c
 
 Java Script,CSS & README
 ## Link to project
-
+https://teddjames.github.io/AkanWeb/
 ## Contact Information
 
 Email: tedd.james@student.moringaschool.com
