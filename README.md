@@ -1,6 +1,6 @@
 ## Project Name
 
-Akan Web Project
+Akan Web 
 
 ## Project Description
 
